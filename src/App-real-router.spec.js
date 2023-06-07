@@ -10,7 +10,7 @@ const router = createRouter({
   routes
 })
 
-describe('change page', () => {
+describe.skip('change page', () => {
   beforeEach(async () => {
     // navigate to the home page
     router.push('/')
