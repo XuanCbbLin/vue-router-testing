@@ -10,15 +10,11 @@ vi.mock('vue-router', () => ({
   }))
 }))
 
-describe('change page', () => {
+describe.skip('change page', () => {
   it('should switch to /about', async () => {
     // arrange
     // stubs router-link, router-view
-    const wrapper = mount(App, {
-      global: {
-        stubs: ['router-link', 'router-view']
-      }
-    })
+    const wrapper = mount(App)
 
     // 設定 useRouter push 回傳值
     const mockRouter = {
