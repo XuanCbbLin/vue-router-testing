@@ -1,5 +1,12 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const changePage = () => {
+  router.push('/about')
+}
 </script>
 
 <template>
@@ -13,6 +20,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <router-link data-test="home" to="/">Home</router-link>
         <router-link data-test="about" to="/about">About</router-link>
       </nav>
+
+      <div @click="changePage" data-test="changePage"></div>
     </div>
   </header>
 
